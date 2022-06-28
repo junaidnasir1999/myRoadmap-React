@@ -1,0 +1,268 @@
+
+Date:14/Mar/2022  
+
+React RoadMap:  
+
+
+Today Revision Topics:
+
+JSX
+Components:
+functional components
+class components
+Props VS State
+
+
+
+Functional COmponents:
+
+Basic Syntax
+
+function User()
+
+{
+
+return(
+
+<div>
+<h1>USer Component </h1
+<h1>Hello</h1>
+  </div>
+  )
+}
+
+export default User;
+
+
+we can also use User Component in App.Js 
+
+Like that:
+
+import User from './User'
+<User />
+
+if we not use export content so, we can use this syntax 
+import {User} from './User'
+
+
+we can also use function component in App.js
+
+
+Class Components
+
+import React,{Component} from 'react'
+export default class User extends Component
+{
+	render()
+	{
+	return (
+	<h1> Hello from USer </h1>
+	)
+	}
+}
+
+
+Click event fucntion:
+
+change krne kay liye hamara normal variable se kaam nhi chaltha tbhi state & props use krthy hai
+
+
+Date: 20/04/2022
+
+
+State in Functional Components:
+
+State is property of React & Var is property of Javascript
+(State me data update hojatha hai variable kyy case me update ni hota)
+
+imort {useState} from 'react'
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+
+const [data,setData]=useState(0) 
+
+function updateData()
+{
+setData(data+1)
+
+}
+return (
+<div className="App">
+<h1>{data}</h1>
+<button onCLick={updateData}>Update Data</button>
+
+</div>
+);
+}
+export default App;
+
+varibale me component update nhi hota state me update hojatha hai
+Interview Q:
+State ko component se bahir use nhi krskty (Dusray Tareqqay se krskty hai)
+State is public
+
+Props:
+
+in props component are resusable and use from outside the component
+to give data to Component
+
+
+Student.JS
+
+function Student(props) {
+console.log(props)
+return (
+<div style={{ backgroundColor: "skyblue", margin: 10 }}>
+<h1> Hello {props.name}</h1>
+<h2> Email : {props.email}</h2>
+<h3> Adress : {props.other.adress}</h3>
+</div>
+)
+}
+
+export default Student
+
+in App.Js
+
+import Student from './Student'
+
+function App() {
+return (
+<div className="App"
+<h1>Props in react :)</h1>
+<Student name={'anil'} email="jnu.prepare@gmail.com" />
+<Student name={'Joseph'} email="Aut.design@gmail.com" />
+<Student name={'Huion'} email="gop.fox@gmail.com" />
+
+</div>
+
+);
+}
+
+export default App;
+
+
+To update data
+we can use this Syntax
+
+function App() {
+
+const [name,setName]=useState("Anil")
+return ()
+<div className="App">
+<h1>Props in React :)</h1>
+<Student name={name}/>
+<button onClick={()=>{setName("sidhu")}} >Update Name</button>
+</div>
+
+);
+}
+export default App;
+
+
+
+}
+
+
+Life cycle Methods:
+Mounting Birth lena
+Updating LIfe CHange
+Unmounting End 
+
+
+Load Product
+Update Product
+Remove Product
+
+Cycle will change every time
+
+
+Mounting:
+first constructor bntha hai before rendring
+after that render hotha hai 
+Phir component DidMount call hoga
+
+
+Constructor me
+ hum props ko use krskthy hai
+
+
+Render method class me bntha hai
+
+Render method state or props ko update krny kay lye use hotha hai and jb component bntha hai by default atha hai
+
+render me state update nhi hogi 
+
+Component DidMount:
+
+
+Use for API and hide show krwana hai or html pr depend ho
+
+INterview QUESTION:
+STATE UPDATE krwa skty hai
+
+
+
+Component DidUpdate
+past state ya current state similar hai ya dfifrent hai
+we can put the condition also
+
+API call krskthy hai conditonal hogi 
+
+without conditon degyyy toh infinite loop me chla jaye ga
+
+
+Should Component Update: unique conmponent
+agar hum chathy hai render method dobara call na ho
+
+application ki perfomace enhance hogi cause of rendering method brr brr ni call hoga
+
+agar ye true hoga then componentDidUpdate chlyy ga agar false hoga to nhi chlyy ga
+
+
+
+Component willUnmount: we need two components
+
+remove ko visible kyy ga ya visible ko remove kryy ga
+
+Parent component me se child component render hoga ComponentWillUnmount wala bs Class component hoga
+
+
+Hooks:
+
+hm isliye use krsthy hai because lifecycle me hmmm function component use nhi krksty 
+
+
+
+
+Javascript:
+
+Basic Syntax
+
+UPPER CASE
+l ower case
+
+Datatypes
+
+1) String var x = "Hello World"
+2) Number var x = 25 
+3) Boolean var x = true
+4) Array vare x = [14,15,16]
+5) Object var x = {First: "Jane", Second: "Hassan", Last: "Asim"}
+6) Null
+7) Undefined 
+
+
+J.s String Methods
+
+Length
+toLowerCase()
+toUpperCase()
+Includes()
+
+
+Forloop:
+
+for(var a = 0; a <=4; a++) 
